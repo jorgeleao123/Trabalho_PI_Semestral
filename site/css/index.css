@@ -1,0 +1,54 @@
+@import url("../fontes/cloister-black.zip");
+
+body {
+    background-color: var(--bg_color);
+    height: 900vh;
+}
+.frase_efeito {
+    text-align: center;
+    font-weight: bold;
+    max-width: 80vw;
+    margin: 40vh auto;
+    color: var(--third);
+    font-size: xx-large;
+}
+
+.container-funcionalidades {
+    max-width: 900px;
+    margin: 0 auto;
+    height: max-content;
+}
+
+.funcionalidades {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+    align-items: center;
+    text-align: center;
+    height: 65vh;
+}
+
+.funcionalidades > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.img_funcionalidades {
+    width: 12vw;
+}
+
+.funcionalidades > div {
+    width: 16rem;
+}
+
+.bg_img2 {
+    background-image: url(../img/img_2_index.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 45vh;
+}
+
+.box_noticias {
+    display: inline-block;
+}

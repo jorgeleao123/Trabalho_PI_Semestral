@@ -4,18 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>header</title>
 </head>
 <body>
 
-    <div class="header">
-        <div class="container_header">
-            <div class="logo">
-                <h1>LW <br> Company</h1>
+    <header>
+        
+            <div id="menu-bar">
+                <div id="menu" onclick="abrir_hamburguer()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+
+                <ul class="nav" id="nav">
+                    <li><a href="">Loja</a></li>
+                    <li><a href="">Comunidade</a></li>
+                    <li><a href="">Cadastro</a></li>
+                    <li><a href="">Fale conosco</a></li>
+
+                </ul>
             </div>
+            <div class="menu-bg" id="menu-bg"></div>
+
+            <div class="frase_efeito">
+                <p>Espalhando a cultura lowrider diariamente com tecnologia</p>
+            </div>
+            
+    </header>
+
+    <div class="container-funcionalidades">
+
+        <div class="funcionalidades">
+        <div>
+            <img src="img/racing.png" alt="" class="img_funcionalidades">
+            <h3>Autopeças</h3>
+            <p>Vendas de autopeças dedicadas a lowrider</p>
         </div>
+        <div>
+            <img src="img/positive-review.png" alt="" class="img_funcionalidades">
+            <h3>Comunidade</h3>
+            <p>Interação com a comunidade a fim de disseminar a cultura lowrider</p>
+        </div>
+        <div>
+            <img src="img/evento.png" alt="" class="img_funcionalidades">
+            <h3>Eventos</h3>
+            <p>Esteja sempre atento com as informações da comunidade sobre eventos dedicados ao tema</p>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="bg_img2">
+        <img src="" alt="">
+    </div>
+
+    <div class="container-valores">
+
+        <div class="box_noticias">
+            <form>
+                <img src="https://images.vectorhq.com/images/previews/396/lowrider-font-banner-psd-428302.png" alt="">
+                <h3>Evento LwComunity em Bragrança</h3>
+            </form>
+        </div>
+
     </div>
     
 </body>
+<script src="script.js"></script>
 </html>
