@@ -1,19 +1,23 @@
-@import url("../fontes/cloister-black.zip");
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 
 body {
     background-color: var(--bg_color);
     height: 900vh;
 }
-.frase_efeito {
-    text-align: center;
+
+.modal a {
     font-weight: bold;
-    max-width: 80vw;
-    margin: 40vh auto;
-    color: var(--third);
-    font-size: xx-large;
+    color: var(--yellow);
+    text-decoration: none;
 }
 
-.container-funcionalidades {
+.context a {
+    font-weight: bold;
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+.container-pag {
     max-width: 900px;
     margin: 0 auto;
     height: max-content;
@@ -26,6 +30,13 @@ body {
     align-items: center;
     text-align: center;
     height: 65vh;
+}
+
+.funcionalidades h3 {
+    font-weight: bold;
+    font-size: x-large;
+    color: var(--yellow);
+    font-family: 'UnifrakturCook';
 }
 
 .funcionalidades > img {
@@ -41,14 +52,123 @@ body {
     width: 16rem;
 }
 
-.bg_img2 {
-    background-image: url(../img/img_2_index.webp);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 45vh;
+.funcionalidades p {
+    font-weight: lighter;
 }
 
-.box_noticias {
-    display: inline-block;
+.bg_img2 {
+    font-weight: bold;
+    color: var(--yellow);
+    text-align: center;
+    height: 40vh;
+    text-shadow: 1px 1px 2px black;
+    background-image: url(../img/img_2_index.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg_img2 h1 {
+    margin: 10vh auto;
+    padding: 4rem 0 0 0;
+}
+
+.box_logo {
+    display: inline-flex;
+    margin: -13rem 0 0 26rem;
+    /* background-color: var(--shadow);
+    box-shadow: 3px 3px 5px 2px var(--second); */
+    z-index: 3;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-quad > img {
+    width: 90px;
+    margin: -10px 0 0 0;
+}
+
+.frase_efeito > h3 {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.context {
+    margin: 10vh 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8vh;
+    grid-gap: 1vw;
+}
+
+.img-context {
+    width: 35vw;
+    box-shadow: 1px 1px 2px 1px black;
+    border-radius: 8px;
+}
+
+.context > div {
+    width: 100%;
+    height: max-content;
+}
+
+.descricao1 {
+    margin: 10vh 0;
+}
+
+.descricao1 p {
+    padding: 2rem 0 0 0;
+}
+
+h1 {
+    font-family: 'UnifrakturCook';
+}
+
+.descricao1 h3 {
+    color: var(--yellow);
+}
+
+
+/* <---- MODAL  ----> */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity 400ms ease-in;
+    background: var(--bg_modal);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fechar {
+    right: -15px;
+    top: -20px;
+    line-height: 30px;
+    width: 30px;
+    position: absolute;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 50%;
+    font-size: 16px;
+    background-color: var(--prim);
+    color: var(--yellow);
+}
+
+.div1-modal {
+    height: 40vh;
+    width: 50vw;
+    margin: 25vh auto;
+    background-color: var(--second);
+    position: relative;
 }

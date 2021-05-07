@@ -2,23 +2,30 @@
     margin: 0;
     padding: 0;
     border: 0;
+    list-style: none;
 }
 
 :root {
     --prim: white;
-    --secund: rgba(255, 255, 255, 0.5);
-    --third: #f7bc1a;
+    --second: rgba(216, 211, 209);
+    --third: rgb(91, 26, 30);
     --fourth: rgb(0, 0, 0, .5);
-    --bg_color: rgb(182, 168, 129);
+    --bg_color: rgb(252, 244, 241);
+    --shadow: rgb(244, 234, 233, 0.2);
+    --yellow: rgb(255, 166, 0);
+    --fifth: rgb(116, 52, 127);
+    --bg_modal: rgb(104, 100, 92, 0.3);
 }
 
 header {
-    background: url(../img/img_low_header.jpg);
+    background: url(../img/img_header.jpg);
     display: -webkit-box;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 80vh;
-    border-bottom: 2px solid var(--third);
+    border-bottom: 4px solid var(--yellow);
+    box-shadow: 1px 1px black;
 }
 
 #menu {
@@ -33,10 +40,11 @@ header {
     height: 5px;
     width: 100%;
     margin-bottom: 5px;
-    background-color:var(--third);
+    background-color:var(--yellow);
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
+    border: 0.2px solid black;
 }
 
 #bar1 {
@@ -54,7 +62,7 @@ li {
 
 .nav li a {
     text-decoration: none;
-    color: var(--third);
+    color: var(--prim);
     margin: 30px;
 }
 
@@ -77,7 +85,7 @@ li {
 .menu-bg, #menu-bar {
     position: absolute;
     display: inline-flex;
-    margin: 2rem 0 0 16rem;
+    margin: 2rem 0 0 12rem;
 }
 
 .menu-bg {
@@ -85,7 +93,6 @@ li {
     width: 0;
     height: 0;
     margin: 0 0 20px 20px;
-    background: var(--prim);
     border-radius: 50%;
     transition: 0.3s ease;
 }
@@ -101,7 +108,7 @@ li {
 }
 
 .change .bar {
-    background-color: var(--prim);
+    background-color: var(--bg_color);
 } 
 
 .change #bar1 {
@@ -118,4 +125,14 @@ li {
 
 .change {
     display: block;
+}
+
+.frase_efeito {
+    text-align: center;
+    font-weight: bold;
+    max-width: 80vw;
+    margin: 28vh auto;
+    color: var(--yellow);
+    font-size: larger;
+    text-shadow: 2px 1px 2px black;
 }
