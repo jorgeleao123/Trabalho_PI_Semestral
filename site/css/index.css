@@ -1,17 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 
-body {
-    background-color: var(--bg_color);
-    height: 900vh;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
 }
 
-.modal a {
+h1 {
+    font-family: 'UnifrakturCook';
+}
+
+body {
+    background-color: var(--bg_color); 
+    height: min-content;
+}
+
+.context a {
     font-weight: bold;
     color: var(--yellow);
     text-decoration: none;
 }
 
-.context a {
+.context2 a {
     font-weight: bold;
     color: var(--yellow);
     text-decoration: none;
@@ -45,7 +56,7 @@ body {
 }
 
 .img_funcionalidades {
-    width: 12vw;
+    width: 10vw;
 }
 
 .funcionalidades > div {
@@ -76,8 +87,6 @@ body {
 .box_logo {
     display: inline-flex;
     margin: -13rem 0 0 26rem;
-    /* background-color: var(--shadow);
-    box-shadow: 3px 3px 5px 2px var(--second); */
     z-index: 3;
     padding: 20px;
     border-radius: 20px;
@@ -87,7 +96,7 @@ body {
 }
 
 .menu-quad > img {
-    width: 90px;
+    width: 170px;
     margin: -10px 0 0 0;
 }
 
@@ -97,7 +106,15 @@ body {
 }
 
 .context {
-    margin: 10vh 0;
+    margin: 26vh 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8vh;
+    grid-gap: 1vw;
+}
+
+.context2 {
+    margin: 120vh 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 8vh;
@@ -115,60 +132,23 @@ body {
     height: max-content;
 }
 
+.context2 > div {
+    width: 100%;
+    height: max-content;
+}
+
 .descricao1 {
     margin: 10vh 0;
 }
 
-.descricao1 p {
-    padding: 2rem 0 0 0;
+.descricao2 {
+    margin: 8vh 0;
 }
 
-h1 {
-    font-family: 'UnifrakturCook';
+.container-pag p {
+    padding: 2rem 0 0 0;
 }
 
 .descricao1 h3 {
     color: var(--yellow);
-}
-
-
-/* <---- MODAL  ----> */
-
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transition: opacity 400ms ease-in;
-    background: var(--bg_modal);
-    opacity: 0;
-    pointer-events: none;
-}
-
-.modal:target {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.fechar {
-    right: -15px;
-    top: -20px;
-    line-height: 30px;
-    width: 30px;
-    position: absolute;
-    text-align: center;
-    margin-top: 5px;
-    border-radius: 50%;
-    font-size: 16px;
-    background-color: var(--prim);
-    color: var(--yellow);
-}
-
-.div1-modal {
-    height: 40vh;
-    width: 50vw;
-    margin: 25vh auto;
-    background-color: var(--second);
-    position: relative;
 }

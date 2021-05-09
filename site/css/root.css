@@ -1,0 +1,11 @@
+:root {
+    --prim: white;
+    --second: rgba(216, 211, 209);
+    --third: rgb(91, 26, 30);
+    --fourth: rgb(0, 0, 0, .5);
+    --bg_color: rgb(252, 244, 241);
+    --shadow: rgb(244, 234, 233, 0.2);
+    --yellow: rgb(255, 166, 0);
+    --fifth: rgb(116, 52, 127);
+    --bg_modal: rgb(104, 100, 92, 0.3);
+}

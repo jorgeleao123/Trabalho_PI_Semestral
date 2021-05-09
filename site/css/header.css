@@ -1,82 +1,69 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    list-style: none;
+
+/* definindo como funcionará o header */
+
+header {      
+    background: url(../img/img_header.jpg); /* colocando imagem de fundo */
+    display: grid;   /* display grid permite a formatação correta do header */
+    background-position: center;    /* posição da imagem ao centro */
+    background-repeat: no-repeat;   /* não repete a imagem */
+    background-size: cover;     /* a imagem cobre meu espaço */
+    height: 80vh;      /* vh é uma unidade de medida que define a altura visivel do meu site */
+    border-bottom: 4px solid var(--yellow);     /* definindo borda de baixo do header */
+    box-shadow: 1px 1px black;    
 }
 
-:root {
-    --prim: white;
-    --second: rgba(216, 211, 209);
-    --third: rgb(91, 26, 30);
-    --fourth: rgb(0, 0, 0, .5);
-    --bg_color: rgb(252, 244, 241);
-    --shadow: rgb(244, 234, 233, 0.2);
-    --yellow: rgb(255, 166, 0);
-    --fifth: rgb(116, 52, 127);
-    --bg_modal: rgb(104, 100, 92, 0.3);
-}
-
-header {
-    background: url(../img/img_header.jpg);
-    display: -webkit-box;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    border-bottom: 4px solid var(--yellow);
-    box-shadow: 1px 1px black;
-}
-
+/* <--- ESTILIZANDO MENU HAMBUERGUER ---> */
 #menu {
-    width: 35px;
+    width: 35px;  
     height: 30px;
     margin: 7px 7px 18px 6px;
     padding-top: 10px;
     cursor: pointer;
 }
 
+/* <--- ESTILIZANDO AS BARRAS MENU HAMBUERGUER ---> */
+
 .bar {
     height: 5px;
-    width: 100%;
+    width: 100%;    /* A WIDTH 100% GARANTE QUE MINHA BARRA OCUPARÁ A LARGURA DE 100% DA DIV DA QUAL ELE ESTÁ INSERIDO */
     margin-bottom: 5px;
     background-color:var(--yellow);
-    display: block;
+    display: block;     /* DISPLAY BLOCK FAZ COM QUE MINHAS BARRAS FIQUEM ORDENADAS EM BLOCOS, OU SEJA, UM EMBAIXO DO OUTRO */
     border-radius: 5px;
-    transition: 0.3s ease;
+    transition: 0.3s ease;      /* TRANSITION GARANTE O EFEITO DE TRANSIÇÃO AO SER INICIADO A ANIMAÇÃO DO MENU HAMBURGUER */
     border: 0.2px solid black;
 }
 
-#bar1 {
-    transform: translateY(-4px);
+#bar1 {     /* AO SER INICIADO MINHA ANIMAÇÃO, A BARRA 1 IRÁ SE DESLOCAR -4PX NO EIXO Y, INCLINANDO MINHA BARRA */
+    transform: translateY(-4px);   
 }
-#bar3 {
+
+#bar3 {     /* AO SER INICIADO MINHA ANIMAÇÃO, A BARRA 3 IRÁ SE DESLOCAR 4PX NO EIXO Y, INCLINANDO MINHA BARRA PARA CIMA */
     transform: translateY(4px);
 }
 
 li {
     list-style: none;
-    display: inline;
+    display: inline;    /*O DISPLAY INLINE FAZ COM QUE MEUS ELEMENTOS DENTRO DA MINHA TAG DE LISTA FIQUEM ALINHADOS */
     margin: 2.5rem;
 }
 
-.nav li a {
+.nav li a {     /* ESTILIZANDO A DECORAÇÃO DAS MINHAS ÂNCORAS */
     text-decoration: none;
     color: var(--prim);
     margin: 30px;
 }
 
-.nav li a:hover{
-    font-weight: bold;
+.nav li a:hover{     /* O HOVER É O ATRIBUTO QUE ESTILIZA MINHA TAG AO SER PASSADO O CURSOR POR CIMA */
+    font-weight: bold;      /* NO CASO, DEIXANDO MINHA FONTE EM NEGRITO AO PASSAR O CURSOR */
 }
 
-.nav {
+.nav {      /* ESTILIZANDO A TAG NAV, QUE É BASICAMENTE A TAG QUE ENGLOBA TODA MINHA LISTA DE NAVEGAÇÃO DO HEADER */
     padding: 0;
     height: 2.5em;
     width: 65vw;
     padding: 18px 0 0 0;
     margin: 0 0 0 15px;
-    transition: 0.3s ease;
     display: none;
     background-color: var(--fourth);
     border-radius: 8px;
