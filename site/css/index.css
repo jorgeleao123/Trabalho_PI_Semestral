@@ -5,6 +5,7 @@
     padding: 0;
     border: 0;
     list-style: none;
+    transition: 5ms ease-in-out;
 }
 
 h1 {
@@ -87,6 +88,7 @@ body {
 .box_logo {
     display: inline-flex;
     margin: -13rem 0 0 26rem;
+    transition: 0.5ms ease;
     z-index: 3;
     padding: 20px;
     border-radius: 20px;
@@ -95,9 +97,17 @@ body {
     text-align: center;
 }
 
-.menu-quad > img {
+.box_logo:hover {
+    transform: translateY(-5px);
+}
+
+.menu-quad .logo {
     width: 170px;
     margin: -10px 0 0 0;
+}
+
+.menu-quad :hover {
+    transform: rotate(-5deg);
 }
 
 .frase_efeito > h3 {
@@ -109,16 +119,22 @@ body {
     margin: 26vh 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 8vh;
     grid-gap: 1vw;
 }
 
 .context2 {
-    margin: 120vh 0;
+    margin: 35vh 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 8vh;
     grid-gap: 1vw;
+}
+
+.context3 {
+    margin: 0 0 20vh 0 ;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 8vh;
 }
 
 .img-context {
@@ -127,12 +143,13 @@ body {
     border-radius: 8px;
 }
 
-.context > div {
-    width: 100%;
-    height: max-content;
+.img-context-trabalho {
+    width: 60vw;
+    height: 50vh;
+    margin: 0 auto;
 }
 
-.context2 > div {
+.context > div {
     width: 100%;
     height: max-content;
 }

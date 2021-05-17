@@ -45,13 +45,14 @@ header {
 li {
     list-style: none;
     display: inline;    /*O DISPLAY INLINE FAZ COM QUE MEUS ELEMENTOS DENTRO DA MINHA TAG DE LISTA FIQUEM ALINHADOS */
-    margin: 2.5rem;
+    margin: 1.5rem;
 }
 
 .nav li a {     /* ESTILIZANDO A DECORAÇÃO DAS MINHAS ÂNCORAS */
     text-decoration: none;
     color: var(--prim);
     margin: 30px;
+    transition: 0.5ms ease-in-out;
 }
 
 .nav li a:hover{     /* O HOVER É O ATRIBUTO QUE ESTILIZA MINHA TAG AO SER PASSADO O CURSOR POR CIMA */
@@ -64,7 +65,7 @@ li {
     width: 65vw;
     padding: 18px 0 0 0;
     margin: 0 0 0 15px;
-    display: none;
+    display: none;      /* display ficará none até que o comando seja inicializado */
     background-color: var(--fourth);
     border-radius: 8px;
 }
@@ -122,4 +123,8 @@ li {
     color: var(--yellow);
     font-size: larger;
     text-shadow: 2px 1px 2px black;
+}
+
+.frase_efeito :hover {
+    transform: translateY(-5px);
 }
