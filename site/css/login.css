@@ -1,0 +1,66 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    border: 0;
+} 
+
+.bg-img-login {
+    background-image: url(../img/img_low_header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+.box-login {
+    height: 85vh;
+    width: 35vw;
+    box-shadow: 1px 2px 1px #232323;
+    background-color: var(--fourth);
+    border-radius: 10px;
+    margin: 10vh auto;
+}
+
+.div-login {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 7rem 4rem 0.6rem);
+}
+
+.div-login img {
+    width: 220px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'UnifrakturCook';
+    color: var(--yellow);
+}
+
+.inp-login {
+    height: 35px;
+    width: 350px;
+    margin: 0 auto;
+    background-color: var(--fourth);
+    border: none;
+    padding: 5px;
+}
+
+.inp-senha {
+    height: 35px;
+    width: 350px;
+    margin: -53px auto;
+    background-color: var(--fourth);
+    border: none;
+    padding: 5px;
+}
+
+span {
+    color: white;
+    z-index: 99;
+    margin: 0 15rem 0 0;
+    
+}

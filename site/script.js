@@ -13,11 +13,10 @@ function enviar() {
 
     email.indexOf('@') == -1 || email.indexOf('.com') == -1 ? 
         alert('Email invalido') 
+        : veiculos < 1 ?
+            alert('Veiculo ainda não foi selecionado')
         : alert('Email cadastrado com sucesso');
 
-    veiculos != 1 && veiculos != 2 && veiculos != 3 ?
-        alert('Veiculo ainda não foi selecionado')
-        : 0;
 }
 
 function analisar() {

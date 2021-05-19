@@ -1,6 +1,6 @@
 .rodape {
     background-color: var(--yellow);
-    height: 60vh;
+    height: 64vh;
 }
 
 .container-rodape {
@@ -56,10 +56,10 @@
 }
 
 .perguntas {
-    margin-top: 6rem;
+    margin-top: 2rem;
     background-color: transparent;
     width: 550px;
-    height: 280px;
+    height: 300px;
 }
 
 .perguntas p {
@@ -100,4 +100,9 @@
     color: white;
     height: 60px;
     padding-top: 30px;
+}
+
+.maps{
+    width: 500px;
+    height: 200px;
 }
