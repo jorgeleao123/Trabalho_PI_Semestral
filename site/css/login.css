@@ -64,3 +64,5 @@ span {
     margin: 0 15rem 0 0;
     
 }
+
+.img {-webkit-filter: grayscale(100%),}
