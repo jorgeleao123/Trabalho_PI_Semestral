@@ -1,1 +1,0 @@
-callBackAjaxPerforma_exitIntent({"status":"ok","message":"Everything alright.","product_data":[],"result":[],"count":0,"hits":0,"minimum":4,"route":"personal\/products","extra":{"intelligence":"personal\/products","products_enabled":"products_a","processed_quantity":0},"ms":"0422","type":"recommendation"});
