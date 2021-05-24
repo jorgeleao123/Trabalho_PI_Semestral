@@ -38,8 +38,12 @@
 
 ::placeholder {
     color: white;
-    font-weight: bold;
     background-color: transparent;
+    padding: 0 5px;
+}
+
+textarea {
+    padding: 5px;
 }
 
 .cadastro-leads :hover {

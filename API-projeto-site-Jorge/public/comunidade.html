@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/comunidade.css">
+    <title>Comunidade</title>
+</head>
+<body class="bg_comunity">
+
+    <header>
+        
+        <div id="menu-bar">
+            <div class="menu-quad"> <img class="logo" src="img/img_logo.png" alt=""></div>
+            <div id="menu" onclick="abrir_hamburguer()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+
+            <ul class="nav" id="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Comunidade</a></li>
+                <li><a href="">Dedicatórias</a></li>
+            </ul>
+        </div>
+        <div class="menu-bg" id="menu-bg"></div>
+
+        <div class="frase_efeito">
+            <!-- <h1>O clássico de uma forma nunca vista antes</h1> -->
+            <h1>Comunidade</h1>
+        </div>
+            
+    </header>
+
+    <div class="container-comunidade">
+
+        <div class="caixa">
+
+            <div class="caixa-video">
+                <video src="img/video_comunity1.mp4" controls type="video/mp4" class="video-comunity"></video>
+                <div class="like-dislike">
+                    <img src="img/like.png" alt="" class="icon" onclick="curtir()">
+                    <span id="curtidas" class="numbers"> 0 </span>
+                    <img src="img/dislike.png" alt="" class="icon" onclick="descurtir()">
+                    <span id="descurtidas" class="numbers"> 0 </span>
+                </div>
+                
+            </div>
+
+            <div class="coment-video">
+                <div id="div_coment"></div>
+                <textarea name="" id="inp_comentario" class="box-coment" placeholder="adicionar um comentário público"></textarea>
+                <button class="btn-coment" onclick="comentar()"> COMENTAR </button>
+                
+            </div>
+    
+        </div>
+
+        <div class="eventos">
+
+            <div class="event">
+                <img src="img/event_4.jpg" alt="" class="img-events">
+                Primeira exposição dos carros modificados pela LwCompany <br>
+                Data: 17/12/2021
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.691716311056!2d-46.8696074853853!3d-23.507611065493762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03d3b8864e6d%3A0x26a0a0554eb5aa74!2sBarueri%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1621805234968!5m2!1spt-BR!2sbr" 
+                width="400" height="60" style="border:0; margin: auto;" allowfullscreen="" loading="lazy"></iframe>
+                <button class="btn-modal"> <a href="#abrirmodal3" class="ancora"> INSCREVER </a></button>
+            </div>
+
+            <div class="event">
+                <img src="img/event_2.jpg" alt="" class="img-events">
+                Evento Lowrider Suspension de competição em parceiria com a Bandtec <br>
+                Data: 27/11/2021
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1536063380545!2d-46.656616685383945!3d-23.562926067534313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8e70065e9%3A0x3212f92921c32582!2sAv.%20Paulista%2C%201374!5e0!3m2!1spt-BR!2sbr!4v1621810098896!5m2!1spt-BR!2sbr" 
+                width="400" height="60" style="border:0; margin: auto;" allowfullscreen="" loading="lazy"></iframe>
+                <button class="btn-modal"> <a href="#abrirmodal3" class="ancora"> INSCREVER </a></button>
+            </div>
+
+            <div class="event">
+                <img src="img/event_3.jpg" alt="" class="img-events">
+                Evento Lowrider Classic com exposição e corridas drag <br>
+                Data: 19/01/2022
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60631.50837945826!2d-46.9331052940555!3d-23.468131267803077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03b510f64c51%3A0x9dfa0074332efe43!2sParque%20Ecol%C3%B3gico%20-%20Ilha%20do%20Tambor%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1621810552339!5m2!1spt-BR!2sbr" 
+                width="400" height="60" style="border:0; margin: auto;" allowfullscreen="" loading="lazy"></iframe>
+                <button class="btn-modal"> <a href="#abrirmodal3" class="ancora"> INSCREVER </a></button>
+            </div>
+
+            <div class="event">
+                <img src="img/event_1.jpg" alt="" class="img-events">
+                Evento Lowrider Classic com exposição e corridas drag <br>
+                Data: 17/12/2001
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.691716311056!2d-46.8696074853853!3d-23.507611065493762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03d3b8864e6d%3A0x26a0a0554eb5aa74!2sBarueri%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1621805234968!5m2!1spt-BR!2sbr" 
+                width="400" height="60" style="border:0; margin: auto;" allowfullscreen="" loading="lazy"></iframe>
+                <button class="btn-modal"> <a href="#abrirmodal3" class="ancora"> INSCREVER </a></button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="abrirmodal3" class="modal">
+
+        <div class="box-cadastro">
+            <a href="#fecharmodal" class="fechar">x</a>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Feito com carinho por um aluno Bandtec. Copyright ₢ 2021
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

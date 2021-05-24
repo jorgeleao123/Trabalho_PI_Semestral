@@ -2,7 +2,7 @@ body, html{
     margin: 0;
     padding: 0;
     border: 0;
-    background-image: url(../img/img_low_header.jpg);
+    background-image: url(../img/login-walpaper.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -19,7 +19,7 @@ a {
     box-shadow: 1px 2px 1px #232323;
     background-color: var(--fourth);
     border-radius: 10px;
-    margin: 10vh auto;
+    margin: 5vh auto;
 }
 
 .div-login {

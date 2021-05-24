@@ -172,7 +172,7 @@
 
                     </div>
 
-                    <textarea name="descricao_mudanca" id="texto_leads" onkeyup="analisar()" class="mensagem-leads" type="text" maxlength="300"></textarea>
+                    <textarea name="descricao_mudanca" id="texto_leads" onkeyup="analisar()" class="mensagem-leads" type="text" maxlength="300" placeholder="Digite o que você deseja modificar em seu veículo e entraremos em contato"></textarea>
 
                     <input type="submit" id="btn_entrar" value="Cadastrar" class="btn-enviar">
 
@@ -194,8 +194,9 @@ function cadastrar() {
 
     nome = String(inp_nome.value);
     email = String(inp_email.value);
-    telefone = Number(inp_telefone.value);
+    telefone = String(inp_telefone.value);
     veiculos = Number(combo_veiculos.value);
+    texto = String(texto_leads.value);
 
     if (email.indexOf('@') == -1 || email.indexOf('.com') == -1) {
         alert('Email invalido');
@@ -203,6 +204,12 @@ function cadastrar() {
     } else if (veiculos < 1) {
         alert('Veiculo ainda não foi selecionado')
         
+    } else if (telefone.length < 8) {
+        alert('Telefone não é valido')
+
+    } else if (texto.length) {
+        alert('Digite o que você deseja modificar em seu veículo')
+
     } else {
         alert('Email cadastrado com sucesso');
         var formulario = new URLSearchParams(new FormData(form_cadastro));
@@ -224,7 +231,7 @@ function cadastrar() {
     function analisar() {
     nome = String(inp_nome.value);
     email = String(inp_email.value);
-    telefone = Number(inp_telefone.value);
+    telefone = String(inp_telefone.value);
     veiculos = Number(combo_veiculos.value);
     texto = String(texto_leads.value);
 

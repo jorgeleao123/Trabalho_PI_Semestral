@@ -1,0 +1,152 @@
+
+.bg_comunity {
+    background-color: var(--bg_modal)
+}
+
+.container-comunidade {
+    max-width: 1245px;
+    height: 100%;
+    margin: 10vh auto;
+}
+
+.caixa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.video-comunity {
+    height: 400px;
+    width: 700px;
+}
+
+.caixa-video {
+    display: grid;
+    grid-template-columns: 700px;
+    grid-template-rows: 400px 10vh;
+    margin: 5vh auto;
+}
+
+.like-dislike {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    align-items: center;
+    grid-template-areas: a b c d;
+}
+
+.icon {
+    width: 3vw;
+    margin: 0 0 0 15vh;
+    grid-area: a c;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: translatey(-5px) ;
+}
+
+.numbers {
+    grid-area: b d;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'UnifrakturCook';
+}
+
+.coment-video {
+    display: grid;
+    height: 360px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40vh 8vh;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+.div-coment {
+    background-color: cadetblue; 
+    border-top-left-radius: 8px; 
+    overflow-y: scroll; 
+}
+
+.box-coment {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border-bottom-left-radius: 8px;
+    border: 2px solid var(--fifth); 
+}
+
+#inp_comentario {
+    background-color: var(--second);
+}
+
+#inp_comentario ::placeholder {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-coment {
+    height: 40px;
+    width: 160px;
+    border: 2px solid var(--fifth);
+    background-color: var(--btn);
+    border-bottom-left-radius: 8px;
+    margin-left: 25vw;
+
+}
+
+.eventos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: e1 e2 e3 e4;
+    grid-gap: 65px;
+}
+
+.event {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 30px 50px;
+    grid-gap: 20px;
+    box-shadow: 1px 1px 2px 1px black;
+    padding: 50px;
+    border-radius: 15px;
+    background-color: var(--second);
+}
+
+.event:hover {
+    transform: translateY(-15px)
+}
+
+.btn-modal {
+    margin: auto;
+    height: 40px;
+    width: 100px;
+    transition: 0.4ms ease-in-out;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.ancora {
+    text-decoration: none;
+    list-style: none;
+    color: var(--yellow);
+}
+
+.img-events {
+    height: 150px;
+    margin: auto;
+}
+
+.box-cadastro {
+    box-shadow: 1px 1px 2px 1px black;
+    border-radius: 10px;
+    height: 40vh;
+    width: 80vw;
+    background-color: cadetblue;
+    margin: 25vh auto;
+    position: relative;
+}
