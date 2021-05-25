@@ -169,3 +169,7 @@ body {
 .descricao1 h3 {
     color: var(--yellow);
 }
+
+.modal h3 {
+    text-align: center;
+}

@@ -31,6 +31,23 @@ function comentar() {
                             padding: 8px;"> ${comentario} </span> <br> <br>`;
 }
 
+var lista_pessoas = [];
+
+function cadastrar() {
+    var cadastrado = String(inp_cadastro.value);
+    lista_pessoas.push(cadastrado);
+    msg.innerHTML += `${cadastrado} <br>`;
+}
+
+function fim_cadastro() {
+    var frase = '';
+    for (var cont = 0; cont <= lista_pessoas.length; cont++) {
+        frase += `${lista_pessoas[cont]} `;
+    }
+    msg.innerHTML = `Cadastrada a presença das ${lista_pessoas.length} pessoas: ${frase}.`;
+    alert('Anote em sua agenda para não perder o evento');
+}
+
 
 // function enviar() {
 //     nome = String(inp_nome.value);

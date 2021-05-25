@@ -9,6 +9,15 @@
     margin: 10vh auto;
 }
 
+#div_coment {
+    background-color: var(--third_bg); 
+    border-top-left-radius: 8px; 
+    overflow-y: scroll; 
+    padding: 15px 0 0 10px;
+    border-top: 2px solid var(--third);
+    border-left: 2px solid var(--third);
+}
+
 .caixa {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -39,10 +48,11 @@
     margin: 0 0 0 15vh;
     grid-area: a c;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .icon:hover {
-    transform: translatey(-5px) ;
+    transform: translatey(-5px);
 }
 
 .numbers {
@@ -64,21 +74,17 @@
     margin-top: 50px;
 }
 
-.div-coment {
-    background-color: cadetblue; 
-    border-top-left-radius: 8px; 
-    overflow-y: scroll; 
-}
-
 .box-coment {
     box-shadow: 0 0 0 0;
     outline: 0;
     border-bottom-left-radius: 8px;
-    border: 2px solid var(--fifth); 
+    border: 2px solid var(--third); 
 }
 
 #inp_comentario {
-    background-color: var(--second);
+    background-color: var(--shadow);
+    color: black;
+    font-weight: bold;
 }
 
 #inp_comentario ::placeholder {
@@ -90,11 +96,14 @@
 .btn-coment {
     height: 40px;
     width: 160px;
-    border: 2px solid var(--fifth);
-    background-color: var(--btn);
+    border-left: 2px solid var(--third);
+    border-bottom: 2px solid var(--third);
+    border-right: 2px solid var(--third);
+    background-color: var(--third_bg);
     border-bottom-left-radius: 8px;
     margin-left: 25vw;
-
+    color: var(--prim);
+    font-weight: bold;
 }
 
 .eventos {
@@ -108,6 +117,7 @@
     display: grid;
     text-align: center;
     align-items: center;
+    font-weight: bold;
     grid-template-columns: 1fr;
     grid-template-rows: 150px 30px 50px;
     grid-gap: 20px;
@@ -115,10 +125,16 @@
     padding: 50px;
     border-radius: 15px;
     background-color: var(--second);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: 0.6s;
 }
 
 .event:hover {
-    transform: translateY(-15px)
+    transform: translateY(-15px);
+    -webkit-filter: none;
+    filter: none;
+    
 }
 
 .btn-modal {
@@ -128,17 +144,21 @@
     transition: 0.4ms ease-in-out;
     cursor: pointer;
     padding: 5px;
+    border-radius: 12px;
+    background-color: var(--yellow);
 }
 
 .ancora {
     text-decoration: none;
     list-style: none;
-    color: var(--yellow);
+    color: var(--prim);
+    font-weight: bold;
 }
 
 .img-events {
     height: 150px;
     margin: auto;
+    border-radius: 8px;
 }
 
 .box-cadastro {

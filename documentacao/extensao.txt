@@ -1,0 +1,9 @@
+/* CTRL + ALT + N : SELECIONO O CAMINHO DO DIRETÓRIO E CRIO O ARQUIVO DESEJADO */
+
+
+EXERCICIO : CADASTRO DE PESSOAS
+
+O exercicio precisa ter input para cadastrar participantes juntamente com botão
+Conforme escrito e cadastrado, aparecer o nome das pessoas
+Depois de clicado para confirmar, aparecer "Confirmada a presença de mais x pessoas, anote em sua agenda para não perder 
+    este incrivel evento"
