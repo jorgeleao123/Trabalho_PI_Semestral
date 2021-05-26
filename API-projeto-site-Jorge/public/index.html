@@ -160,7 +160,7 @@
                 </p>
             </div>
 
-                <form id="form_cadastro" method="post" onsubmit="return cadastrar()" class="leads">
+                <form id="form_cadastro" method="POST" onsubmit="return cadastrar_usuario()" class="leads">
 
                     <div class="cads">
 
@@ -197,27 +197,27 @@
 </body>
 <script>
 
-function cadastrar() {
+function cadastrar_usuario() {
 
-    nome = String(inp_nome.value);
-    email = String(inp_email.value);
-    telefone = String(inp_telefone.value);
-    veiculos = Number(combo_veiculos.value);
-    texto = String(texto_leads.value);
+    // nome = String(inp_nome.value);
+    // email = String(inp_email.value);
+    // telefone = String(inp_telefone.value);
+    // veiculos = Number(combo_veiculos.value);
+    // texto = String(texto_leads.value);
 
-    if (email.indexOf('@') == -1 || email.indexOf('.com') == -1) {
-        alert('Email invalido');
+    // if (email.indexOf('@') == -1 || email.indexOf('.com') == -1) {
+    //     alert('Email invalido');
 
-    } else if (veiculos < 1) {
-        alert('Veiculo ainda não foi selecionado')
+    // } else if (veiculos < 1) {
+    //     alert('Veiculo ainda não foi selecionado')
         
-    } else if (telefone.length < 8) {
-        alert('Telefone não é valido')
+    // } else if (telefone.length < 8) {
+    //     alert('Telefone não é valido')
 
-    } else if (texto.length < 9) {
-        alert('Digite o que você deseja modificar em seu veículo')
+    // } else if (texto.length < 9) {
+    //     alert('Digite o que você deseja modificar em seu veículo')
 
-    } else {
+    // } else {
         alert('Email cadastrado com sucesso');
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
@@ -232,7 +232,6 @@ function cadastrar() {
             }
         });
         return false;
-    }
     }
 
     function analisar() {

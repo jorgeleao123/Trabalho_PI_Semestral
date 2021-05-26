@@ -15,7 +15,7 @@
 <body>
 <div class="bg-img-login">
 
-    <form class="box-login" method="post" onsubmit="return entrar()">
+    <form class="box-login" id="form_login" method="post" onsubmit="return entrar_login()">
         <div class="div-login">
             <img src="img/img_logo.png" alt="">
             <h1>Lw Company</h1>
@@ -23,7 +23,7 @@
             <input id="id_login" name="email" type="email" class="inp-login">
             <span>Senha*</span>
             <input id="id_senha" name="senha" type="password" class="inp-senha" placeholder="número cadastrado">
-            <button id="btn_entrar" class="btn-entrar">Entrar</button>
+            <button id="btn_entrar" type="submit" class="btn-entrar">Entrar</button>
             <b><a href="index.html#form_cadastro">Não sou cadastrado</a></b>
         </div>
     </form>
@@ -33,4 +33,38 @@
 </body>
 <script src="script.js"></script>
 <script src="funcoes.js"></script>
+<script>
+
+    function entrar_login() {
+    // aguardar();
+    var formulario = new URLSearchParams(new FormData(form_login));
+    fetch("/usuarios/autenticar", {
+        method: "POST",
+        body: formulario
+    }).then(resposta => {
+
+        if (resposta.ok) {
+
+            resposta.json().then(json => {
+
+                // sessionStorage.login_usuario_meuapp = json.login;
+                sessionStorage.nome_usuario_meuapp = json.nome;
+
+                window.location.href = 'comunidade.html';
+            });
+
+        } else {
+
+            console.log('Erro de login!');
+
+            resposta.text().then(texto => {
+                console.error(texto);
+                // finalizar_aguardar(texto);
+            });
+        }
+    });
+
+    return false;
+}
+</script>
 </html>

@@ -41,11 +41,11 @@ function cadastrar() {
 
 function fim_cadastro() {
     var frase = '';
-    for (var cont = 0; cont <= lista_pessoas.length; cont++) {
+    for (var cont = 0; cont < lista_pessoas.length; cont++) {
         frase += `${lista_pessoas[cont]} `;
     }
-    msg.innerHTML = `Cadastrada a presença das ${lista_pessoas.length} pessoas: ${frase}.`;
-    alert('Anote em sua agenda para não perder o evento');
+    msg.innerHTML = `Cadastrada a presença das ${lista_pessoas.length} pessoas: ${frase}. <br>`
+    msg_final.innerHTML = `Anote em sua agenda para não perder o evento`;
 }
 
 

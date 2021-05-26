@@ -12,10 +12,9 @@ router.post('/autenticar', function(req, res, next) {
 	var email = req.body.email; // depois de .body, use o nome (name) do campo em seu formulário de login
 	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
 	
-	let instrucaoSql = `select * from Cliente_Jorge where email='${email}' 
-							and senha='${senha}' 
-							and tipo_automovel='${tipo_automovel}' 
-							and descricao_mudanca='${descricao_mudanca}'`; // feito
+	let instrucaoSql = `select * from Cliente_Jorge where email='${email}' and senha='${senha}'`;
+							// and tipo_automovel='${tipo_automovel}' 
+							// and descricao_mudanca='${descricao_mudanca}'`; // feito
 							
 	console.log(instrucaoSql);
 
