@@ -41,15 +41,17 @@
 
     <div class="container-comunidade">
 
+        <h1>Encontro de motocicletas no Paraná</h1>
+
         <div class="caixa">
 
             <div class="caixa-video">
                 <video src="img/video_comunity1.mp4" controls type="video/mp4" class="video-comunity"></video>
                 <div class="like-dislike">
                     <img src="img/like.png" alt="" class="icon" onclick="curtir()">
-                    <span id="curtidas" class="numbers"> 0 </span>
+                    <span id="curtidas" style="color: #569cca;" class="numbers">  </span>
                     <img src="img/dislike.png" alt="" class="icon" onclick="descurtir()">
-                    <span id="descurtidas" class="numbers"> 0 </span>
+                    <span id="descurtidas" style="color: #c04848;" class="numbers">  </span>
                 </div>
                 
             </div>
@@ -108,11 +110,11 @@
     <div id="abrirmodal3" class="modal">
 
         <div class="box-cadastro">
-            <input type="text" id="inp_cadastro" placeholder="cadastrar"> <br>
-            <button onclick="cadastrar()"> CADASTRAR </button> <br>
-            <span id="msg"></span>
+            <input type="text" id="inp_cadastro" placeholder="cadastrar">
+            <span id="result"></span>
+            <button onclick="cadastrar()"> CADASTRAR </button>
             <button onclick="fim_cadastro()"> FINALIZAR CADASTRO </button>
-            <span id="msg_final"></span>
+            <span id="msg"></span>
             <a href="#fecharmodal" class="fechar">x</a>
         </div>
 
@@ -140,4 +142,5 @@
     
 </body>
 <script src="script.js"></script>
+<script src="cadastro.js"></script>
 </html>

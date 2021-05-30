@@ -5,21 +5,26 @@ function abrir_hamburguer() {
     document.getElementById("menu-bg").classList.toggle("change");
 }
 
-
 var cont_curt = 0;
+
+var num_curtidas = parseInt(Math.random() * 5000 + 1);
+var num_descurtidas = parseInt(Math.random() * 5000 + 1);
+
+curtidas.innerHTML = `${num_curtidas}`;
+descurtidas.innerHTML = `${num_descurtidas}`;
 
 function curtir() {
     ++cont_curt;
     cont_curt % 2 == 0 ?
-        curtidas.innerHTML = '0'
-        : (curtidas.innerHTML = '1', descurtidas.innerHTML = '0');
+        curtidas.innerHTML = `${num_curtidas + 1}`
+        : (curtidas.innerHTML = `${num_curtidas}`, descurtidas.innerHTML = `${num_descurtidas}`);
 }
 
 function descurtir() {
     ++cont_curt;
     cont_curt % 2 == 0 ?
-        descurtidas.innerHTML = '0'
-        : (descurtidas.innerHTML = '1', curtidas.innerHTML = '0');
+        descurtidas.innerHTML = `${num_descurtidas + 1}`
+        : (descurtidas.innerHTML = `${num_descurtidas}`, curtidas.innerHTML = `${num_curtidas}`);
 }
 
 function comentar() {
@@ -31,34 +36,3 @@ function comentar() {
                             padding: 8px;"> ${comentario} </span> <br> <br>`;
 }
 
-var lista_pessoas = [];
-
-function cadastrar() {
-    var cadastrado = String(inp_cadastro.value);
-    lista_pessoas.push(cadastrado);
-    msg.innerHTML += `${cadastrado} <br>`;
-}
-
-function fim_cadastro() {
-    var frase = '';
-    for (var cont = 0; cont < lista_pessoas.length; cont++) {
-        frase += `${lista_pessoas[cont]} `;
-    }
-    msg.innerHTML = `Cadastrada a presença das ${lista_pessoas.length} pessoas: ${frase}. <br>`
-    msg_final.innerHTML = `Anote em sua agenda para não perder o evento`;
-}
-
-
-// function enviar() {
-//     nome = String(inp_nome.value);
-//     email = String(inp_email.value);
-//     telefone = Number(inp_telefone.value);
-//     veiculos = Number(combo_veiculos.value);
-
-//     email.indexOf('@') == -1 || email.indexOf('.com') == -1 ? 
-//         alert('Email invalido') 
-//         : veiculos < 1 ?
-//             alert('Veiculo ainda não foi selecionado')
-//         : alert('Email cadastrado com sucesso');
-
-// }

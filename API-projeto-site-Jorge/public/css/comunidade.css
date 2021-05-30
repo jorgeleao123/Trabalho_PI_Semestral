@@ -1,4 +1,8 @@
 
+.container-comunidade h1 {
+    color: var(--third);
+}
+
 .bg_comunity {
     background-color: var(--bg_modal)
 }
@@ -101,7 +105,7 @@
     border-right: 2px solid var(--third);
     background-color: var(--third_bg);
     border-bottom-left-radius: 8px;
-    margin-left: 25vw;
+    margin-left: 27vw;
     color: var(--prim);
     font-weight: bold;
 }
@@ -161,20 +165,6 @@
     border-radius: 8px;
 }
 
-.box-cadastro {
-    box-shadow: 1px 1px 2px 1px black;
-    border-radius: 10px;
-    height: 70vh;
-    width: 50vw;
-    background-color: cadetblue;
-    margin: 15vh auto;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 22vh 25vh;
-
-}
-
 .cad {
     display: inline-block;
 }
@@ -185,5 +175,3 @@
     overflow-y: scroll;
     background-color: black;
 }
-
-

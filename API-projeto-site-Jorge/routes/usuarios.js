@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var sequelize = require('../models').sequelize;
-var Cliente_Jorge = require('../models').Cliente_Jorge;
+var Leads_Jorge = require('../models').Leads_Jorge;
 
 let sessoes = [];
 
@@ -12,14 +12,14 @@ router.post('/autenticar', function(req, res, next) {
 	var email = req.body.email; // depois de .body, use o nome (name) do campo em seu formulário de login
 	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
 	
-	let instrucaoSql = `select * from Cliente_Jorge where email='${email}' and senha='${senha}'`;
+	let instrucaoSql = `select * from Leads_Jorge where email='${email}' and senha='${senha}'`;
 							// and tipo_automovel='${tipo_automovel}' 
 							// and descricao_mudanca='${descricao_mudanca}'`; // feito
 							
 	console.log(instrucaoSql);
 
 	sequelize.query(instrucaoSql, {
-		model: Cliente_Jorge
+		model: Leads_Jorge
 	}).then(resultado => {
 		console.log(`Encontrados: ${resultado.length}`);
 
@@ -43,7 +43,7 @@ router.post('/autenticar', function(req, res, next) {
 router.post('/cadastrar', function(req, res, next) {
 	console.log('Criando um usuário');
 	
-	Cliente_Jorge.create({
+	Leads_Jorge.create({
 		nome : req.body.nome,
 		email : req.body.email,
 		senha: req.body.senha,		// feito

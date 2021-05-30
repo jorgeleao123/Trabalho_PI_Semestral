@@ -197,29 +197,29 @@
 </body>
 <script>
 
-var menu_itens = document.querySelectorAll('#nav')
+// var menu_itens = document.querySelectorAll('#nav')
 
-menu_itens.forEach(item => {
-    item.addEventListener('click', scrollToId);
-})
+// menu_itens.forEach(item => {
+//     item.addEventListener('click', scrollToId);
+// })
 
-function scrollToId() {
-    event.preventDefault();
-
-
-    var element = event.target;
-
-    var id_elemento = element.getAttribute('href');
-
-    var divTo = document.querySelector(id_elemento).offsetTop;
+// function scrollToId() {
+//     event.preventDefault();
 
 
-    window.scroll({
-        top: divTo,
-        behavior: "smooth",
+//     var element = event.target;
 
-    });
-}
+//     var id_elemento = element.getAttribute('href');
+
+//     var divTo = document.querySelector(id_elemento).offsetTop;
+
+
+//     window.scroll({
+//         top: divTo,
+//         behavior: "smooth",
+
+//     });
+// }
 
 function cadastrar_usuario() {
 
