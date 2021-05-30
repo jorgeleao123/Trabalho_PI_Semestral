@@ -7,13 +7,16 @@
 .box-cadastro {
     box-shadow: 1px 1px 2px 1px black;
     border-radius: 10px;
+    padding: 10px;
     height: 70vh;
     width: 50vw;
-    background-color: cadetblue;
+    background-color: var(--second);
     margin: 15vh auto;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 25vw);
+    grid-template-rows: 10vh 12vh 18vh 10vh 15vh;
+    align-items: center;
 }
 
 .modal {
@@ -32,6 +35,14 @@
 .modal:target {
     opacity: 1;
     pointer-events: auto;
+}
+
+.modal h2 {
+    display: inline-block;
+    width: 50vw;
+    color: var(--third);
+    text-shadow: 1px 1px 2px white;
+    margin-top: 2vh;
 }
 
 .fechar {
@@ -77,15 +88,39 @@
     height: 30px;
     width: 160px;
     margin: 0 auto;
-}
-
-.modal button {
-    height: 30px;
-    width: 160px;
-    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 #result {
     overflow-y: scroll; 
-    height: 60px;
+    height: 80px;
+    border: 2px solid #232323;
+    border-radius: 5px;
+}
+
+.span-cadastrado {
+    width: 400px;
+    display: block;
+}
+
+.btn-cad {
+    height: 30px;
+    width: 120px;
+    background-color: var(--third);
+    border-radius: 10px;
+    color: white;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.btn-fn-cad {
+    height: 30px;
+    width: 200px;
+    background-color: var(--third);
+    border-radius: 10px;
+    color: white;
+    margin: 0 auto;
+    cursor: pointer;
 }

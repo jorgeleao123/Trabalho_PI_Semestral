@@ -1,6 +1,7 @@
 
 .container-comunidade h1 {
     color: var(--third);
+    margin-left: 3vw;
 }
 
 .bg_comunity {
