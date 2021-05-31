@@ -84,6 +84,14 @@ create table comunidade (
 
 select * from comunidade;
 
+CREATE TABLE publicacao (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    descricao VARCHAR(100),
+	fkUsuario INT
+);
+
+select * from publicacao;
+
 -- -------------------
 -- INSERINDO DADOS 
 -- -------------------

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/comunidade.css">
     <title>Comunidade</title>
 </head>
-<body class="bg_comunity">
+<body class="bg_comunity"  onload="obterPublicacoes()">
 
     <header>    <!-- CABEÇALHO -->
         
@@ -62,10 +62,12 @@
             <!-- COMENTÁRIOS -->
 
             <div class="coment-video">
-
-                <div id="div_coment"></div>
-                <textarea name="" id="inp_comentario" class="box-coment" placeholder="adicionar um comentário público"></textarea>
-                <button class="btn-coment" onclick="comentar()"> COMENTAR </button>
+                <form id="form_publicar" method="post" onsubmit="return publicar()">
+                    <div id="feed_container" class="caixa-comentarios"></div>
+                    <textarea name="descricao" id="inp_comentario" class="box-coment" placeholder="adicionar um comentário público"></textarea>
+                    <button class="btn-coment" id="btn_publicar"> COMENTAR </button>
+                    <!-- onclick="comentar()" -->
+                </form>
                 
             </div>
     
@@ -207,6 +209,111 @@
     </div>
     
 </body>
+<script>
+    function publicar() {
+        console.log("entrei!")
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_publicar));
+        var idUsuario = sessionStorage.id_leads_meuapp;
+        fetch(`/publicacoes/publicar/${idUsuario}`, {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+                obterPublicacoes();
+
+                finalizarAguardar();
+            } else {
+                console.log('Erro ao publicar!');
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function atualizarFeed(publicacoes) {
+        var feed = document.getElementById("feed_container");
+        feed.innerHTML = "";
+        for (let i = 0; i < publicacoes.length; i++) {
+            var publicacao = publicacoes[i];
+
+            var divPublicacao = document.createElement("div")
+            var divNome = document.createElement("div")
+            var divDescricao = document.createElement("div")
+
+            divNome.innerHTML = `${publicacao.nome}:`;
+            divDescricao.innerHTML = publicacao.descricao;
+
+            divPublicacao.className = "publicacao"
+            divNome.className = "nome";
+            divDescricao.className = "descricao";
+
+            divPublicacao.appendChild(divNome);
+            divPublicacao.appendChild(divDescricao);
+
+            feed.appendChild(divPublicacao);
+        }
+    }
+
+    function obterPublicacoes() {
+        aguardar();
+        fetch("/publicacoes")
+        .then(resposta => {
+            if (resposta.ok) {
+                resposta.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                   
+                    atualizarFeed(resposta);
+
+                    finalizarAguardar();
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+                finalizarAguardar("Nenhum resultado encontrado ou erro na API");
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção das publicações: ${error.message}`);
+        });
+    }
+
+    function obterPublicacoesPorUsuario(idUsuario) {
+        fetch(`/publicacoes/${idUsuario}`)
+        .then(resposta => {
+            if (resposta.ok) {
+                resposta.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    // alert(JSON.stringify(resposta))
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção das publicações do usuário: ${error.message}`);
+        });
+    }
+
+    function aguardar() {
+        btn_publicar.disabled = true;
+        // img_aguarde.style.visibility = 'visible';
+        // div_erro.style.visibility = 'hidden';
+    }
+
+    function finalizarAguardar(resposta) {
+        btn_publicar.disabled = false;
+        // img_aguarde.style.visibility = 'hidden';
+        // if (resposta) {
+        //     div_erro.style.visibility = 'visible';
+        //     div_erro.innerHTML = resposta;
+        // }
+    }
+</script>
 <script src="hamburguer.js"></script>
 <script src="cadastro_eventos.js"></script>
 <script src="like_dislike.js"></script>

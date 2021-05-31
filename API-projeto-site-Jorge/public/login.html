@@ -49,6 +49,7 @@
             resposta.json().then(json => {
 
                 sessionStorage.nome_usuario_meuapp = json.nome;
+                sessionStorage.id_leads_meuapp = json.id_leads;
 
                 window.location.href = 'comunidade.html';
             });
