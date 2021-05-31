@@ -37,7 +37,8 @@
     pointer-events: auto;
 }
 
-.modal h2 {
+
+.h1-titulo {
     display: inline-block;
     width: 50vw;
     color: var(--third);
@@ -91,9 +92,11 @@
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
+    background-color: var(--third_bg);
+    color: var(--prim);
 }
 
-#result {
+.result {
     overflow-y: scroll; 
     height: 80px;
     border: 2px solid #232323;

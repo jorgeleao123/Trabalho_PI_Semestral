@@ -71,7 +71,7 @@ span {
     color: white;
     z-index: 99;
     margin: 0 15rem 0 0;
-    
+    height: 20px;
 }
 
 .btn-entrar {

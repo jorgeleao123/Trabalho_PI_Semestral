@@ -1,0 +1,44 @@
+
+.caixa-dedicatorias {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.foto-dedicatorias {
+    height: 90vh;  
+    background-color: var(--second);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); 
+    transition: 900ms ease-in-out;
+    
+}
+
+.foto-dedicatorias:hover {
+    transform: translateY(-10px);
+    -webkit-filter: none;
+    filter: none;
+}
+
+.img-dedicatorias {
+    width: 30vw;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 1px solid #232332;
+    margin: 5vh 2vw;
+}
+
+.img-dedicatorias-faculdade {
+    width: 1fr;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 1px solid #232332;
+    background-position: center;
+    align-items: center;
+    margin: 28vh 1vw;
+}
+
+.titulo-dedicatorias {
+    text-align: center;
+    font-size: 50px;
+    color: var(--blue);
+    /* text-shadow: 1px 1px 2px black; */
+}
