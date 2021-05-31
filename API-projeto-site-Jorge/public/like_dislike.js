@@ -1,10 +1,4 @@
 
-function abrir_hamburguer() {
-    document.getElementById("menu").classList.toggle("change");
-    document.getElementById("nav").classList.toggle("change");
-    document.getElementById("menu-bg").classList.toggle("change");
-}
-
 var cont_curt = 0;
 
 var num_curtidas = parseInt(Math.random() * 5000 + 1);

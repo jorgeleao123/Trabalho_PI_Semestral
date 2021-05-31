@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/cadastro.css">
     <title>Index</title>
 </head>
 <body>
 
-    <header>
+    <header>    <!-- CABEÇALHO -->
         
         <div id="menu-bar">
             <div class="menu-quad"> <img class="logo" src="img/img_logo.png" alt=""></div>
@@ -32,19 +33,18 @@
         <div class="menu-bg" id="menu-bg"></div>
 
         <div class="frase_efeito">
-            <!-- <h1>O clássico de uma forma nunca vista antes</h1> -->
             <h1>Tornando o clássico atemporal</h1>
         </div>
             
     </header>
 
-    <div class="box_logo">
+    <div class="box_logo">      <!-- LOGO LOWRIDER -->
         <form>
             <img src="img/lowrider_logo.png" alt="">
         </form>
     </div>
 
-    <div class="container-pag">
+    <div class="container-pag">        <!-- FUNCIONALIDADES DO SITE -->
 
         <div class="funcionalidades">
         <div>
@@ -66,13 +66,15 @@
 
     </div>
 
-    <div class="bg_img2">
+    <div class="bg_img2">       <!-- FRASE DE EFEITO -->
         <h1>A arte e o cuidado faz da sua ideia única e especial</h1>
     </div>
 
+    <!-- DESCRIÇÃO DO SITE -->
+
     <div class="container-pag">
 
-        <div class="context">
+        <div class="context">   
             <div>
                 <img src="img/img_context.jpg" class="img-context">
             </div>
@@ -83,11 +85,6 @@
                     Os lowriders vieram com o intuito de tornar os automóveis que seriam normais e esquecidos em verdadeiras relíquias,
                     preservando sua carroceria antiga e atualizando suas funções que deixam de ser somente o deslocamento para carros 
                     que transmitem o gosto do seu dono, além da potência de suas suspensões que tornam o carro até mesmo dançante. 
-                    <!-- A cultura lowrider foi criada na década de 50 inovando a forma que os carros funcionavam.
-                    Criado nas periferias dos Estados Unidos por mexicanos e americanos, os lowriders vieram as ruas 
-                    com seus incriveis sistemas de suspensão que permitem o carro aumentar ou diminuir sua distância do chão,
-                    sendo muito famosos pela minima distância possível do solo, mas que também levantam e realizam manobras
-                    como saltos e até mesmo andar sobre 3 rodas.  -->
                 </p>
             </div>
         </div>
@@ -119,13 +116,17 @@
 
     </div>
 
+    <!-- MODAIS DE CONTEXTUALIZAÇÃO DO SITE -->
+
     <div id="abrirmodal1" class="modal">
 
         <div class="div1-modal">
             <img src="https://media.giphy.com/media/xT9IgKgt9iDoLOQafm/giphy.gif" alt="" class="img-low-modal">
-            <h3>O que faz um lowrider</h3>
+            <h2>O que faz um lowrider</h2> <b></b>
             <p>
-
+                O Lowrider surgiu com o intuito de trazer um estilo inigualável para todo novo automóvel modificado.
+                Ele é definido geralmente como sendo um carro de suspensão hidraulica (para os pulos e acrobacias), e 
+                de pinturas únicas que remetem a cultura mexicana, da onde foi inspirada a cricação do novo estilo de carro.
             </p>
             <a href="#fecharmodal" class="fechar">x</a>
         </div>
@@ -136,16 +137,20 @@
 
         <div class="div1-modal">
             <img src="https://media.giphy.com/media/9P55J8tGFHhnJTFdPP/giphy.gif" alt="" class="img-low-modal2">
-            <h3>Motocicletas</h3>
+            <h2> Motocicletas </h2> <b></b>
             <p>
-
+                A ideia em ter uma motocicleta lowrider é justamente aproveitar o estilo e o ronco potente do motor. 
+                Motocicletas do tipo recebem o nome por seus guidons altos, pinturas únicas e bancos que são dos
+                mais confortáveis do mercado, tendo como principais representantes os produtos da marca Harley-Davidson.
             </p>
             <a href="#fecharmodal" class="fechar">x</a>
         </div>
 
     </div>
 
-    <div class="rodape">
+    <!-- CADASTRO USUÁRIO -->
+
+    <div class="rodape">        
         <div class="container-rodape">
 
             <div class="perguntas">
@@ -185,63 +190,21 @@
 
                 </form>
                 
-                <!-- onclick="enviar()" -->
             </div>
         </div>
     </div>
 
+    <!-- RODAPÉ -->
+
     <div class="footer">
+        Suporte: <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"> lowrider.company@gmail.com </a><br>
         Feito com carinho por um aluno Bandtec. Copyright ₢ 2021
     </div>
     
 </body>
-<script>
-
-// var menu_itens = document.querySelectorAll('#nav')
-
-// menu_itens.forEach(item => {
-//     item.addEventListener('click', scrollToId);
-// })
-
-// function scrollToId() {
-//     event.preventDefault();
-
-
-//     var element = event.target;
-
-//     var id_elemento = element.getAttribute('href');
-
-//     var divTo = document.querySelector(id_elemento).offsetTop;
-
-
-//     window.scroll({
-//         top: divTo,
-//         behavior: "smooth",
-
-//     });
-// }
+<script>   // SCRIPT DE CADASTRO
 
 function cadastrar_usuario() {
-
-    // nome = String(inp_nome.value);
-    // email = String(inp_email.value);
-    // telefone = String(inp_telefone.value);
-    // veiculos = Number(combo_veiculos.value);
-    // texto = String(texto_leads.value);
-
-    // if (email.indexOf('@') == -1 || email.indexOf('.com') == -1) {
-    //     alert('Email invalido');
-
-    // } else if (veiculos < 1) {
-    //     alert('Veiculo ainda não foi selecionado')
-        
-    // } else if (telefone.length < 8) {
-    //     alert('Telefone não é valido')
-
-    // } else if (texto.length < 9) {
-    //     alert('Digite o que você deseja modificar em seu veículo')
-
-    // } else {
         alert('Email cadastrado com sucesso');
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
@@ -258,7 +221,8 @@ function cadastrar_usuario() {
         return false;
     }
 
-    function analisar() {
+    function analisar() {   // ocorre toda vez que determinada tecla é clicada, para garantir a veracidade da informação
+
     nome = String(inp_nome.value);
     email = String(inp_email.value);
     telefone = String(inp_telefone.value);
@@ -289,5 +253,5 @@ function cadastrar_usuario() {
 
     
 </script>
-<script src="script.js"></script>
+<script src="hamburguer.js"></script>   <!-- SCRIPT DO ÍCONE DE HAMBURGUER-->
 </html>

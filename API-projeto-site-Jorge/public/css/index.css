@@ -77,7 +77,8 @@ body {
     background-image: url(../img/img_2_index.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed;   
+                    /* PERMITE A VISÃO DIFERENCIADA DA IMAGEM, COM A POSIÇÃO QUE SE ALTERA CONFORME DESCE SITE*/
 }
 
 .bg_img2 h1 {
@@ -168,8 +169,4 @@ body {
 
 .descricao1 h3 {
     color: var(--yellow);
-}
-
-.modal h3 {
-    text-align: center;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
 </head>
 <body class="bg_comunity">
 
-    <header>
+    <header>    <!-- CABEÇALHO -->
         
         <div id="menu-bar">
             <div class="menu-quad"> <img class="logo" src="img/img_logo.png" alt=""></div>
@@ -33,11 +33,12 @@
         <div class="menu-bg" id="menu-bg"></div>
 
         <div class="frase_efeito">
-            <!-- <h1>O clássico de uma forma nunca vista antes</h1> -->
             <h1>Comunidade</h1>
         </div>
             
     </header>
+
+    <!-- COMUNIDADE -->
 
     <div class="container-comunidade">
 
@@ -45,8 +46,10 @@
 
         <div class="caixa">
 
-            <div class="caixa-video">
+            <div class="caixa-video">   <!-- VIDEO LOWRIDER -->
                 <video src="img/video_comunity1.mp4" controls type="video/mp4" class="video-comunity"></video>
+
+                <!-- LIKE / DISLIKE -->
                 <div class="like-dislike">
                     <img src="img/like.png" alt="" class="icon" onclick="curtir()">
                     <span id="curtidas" style="color: #569cca;" class="numbers">  </span>
@@ -56,7 +59,10 @@
                 
             </div>
 
+            <!-- COMENTÁRIOS -->
+
             <div class="coment-video">
+
                 <div id="div_coment"></div>
                 <textarea name="" id="inp_comentario" class="box-coment" placeholder="adicionar um comentário público"></textarea>
                 <button class="btn-coment" onclick="comentar()"> COMENTAR </button>
@@ -64,6 +70,8 @@
             </div>
     
         </div>
+
+        <!-- EVENTOS -->
 
         <div class="eventos">
 
@@ -106,6 +114,8 @@
         </div>
 
     </div>
+
+    <!-- MODAL CADASTRO DE EVENTOS -->
 
     <div id="abrirmodal3" class="modal">
 
@@ -189,11 +199,15 @@
 
     </div>
 
+    <!-- RODAPÉ -->
+
     <div class="footer">
+        Suporte: <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"> lowrider.company@gmail.com </a><br>
         Feito com carinho por um aluno Bandtec. Copyright ₢ 2021
     </div>
     
 </body>
-<script src="script.js"></script>
-<script src="cadastro.js"></script>
+<script src="hamburguer.js"></script>
+<script src="cadastro_eventos.js"></script>
+<script src="like_dislike.js"></script>
 </html>

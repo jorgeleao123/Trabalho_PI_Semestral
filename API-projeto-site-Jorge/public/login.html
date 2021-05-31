@@ -13,6 +13,7 @@
     <title> Cadastro </title>
 </head>
 <body>
+
 <div class="bg-img-login">
 
     <form class="box-login" id="form_login" method="post" onsubmit="return entrar_login()">
@@ -35,8 +36,8 @@
 <script src="funcoes.js"></script>
 <script>
 
-    function entrar_login() {
-    // aguardar();
+    function entrar_login() {   // SCRIPT PARA CADASTRO DE LOGIN
+
     var formulario = new URLSearchParams(new FormData(form_login));
     fetch("/usuarios/autenticar", {
         method: "POST",
@@ -47,7 +48,6 @@
 
             resposta.json().then(json => {
 
-                // sessionStorage.login_usuario_meuapp = json.login;
                 sessionStorage.nome_usuario_meuapp = json.nome;
 
                 window.location.href = 'comunidade.html';
@@ -56,15 +56,16 @@
         } else {
 
             console.log('Erro de login!');
+            alert('Login incorreto');
 
             resposta.text().then(texto => {
                 console.error(texto);
-                // finalizar_aguardar(texto);
             });
         }
     });
 
     return false;
 }
+
 </script>
 </html>

@@ -27,6 +27,13 @@
     margin: 5vh 2vw;
 }
 
+.img-dedicatorias-amigos {
+    width: 25vw;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 1px solid #232332;
+    margin: 9vh 2vw;
+}
+
 .img-dedicatorias-faculdade {
     width: 1fr;
     border-radius: 15px;
@@ -37,8 +44,21 @@
 }
 
 .titulo-dedicatorias {
-    text-align: center;
+    margin: 0 0 0 42.5vw;
     font-size: 50px;
     color: var(--blue);
-    /* text-shadow: 1px 1px 2px black; */
+}
+
+.btn-dedicatoria {
+    height: 6vh;
+    width: 15vw;
+    border-radius: 10px;
+    transition: 900ms ease;
+    cursor: pointer;
+    margin: 0 0 5vh 43vw;
+}
+
+.btn-dedicatoria:hover {
+    background-color: var(--blue);
+    color: var(--prim);
 }

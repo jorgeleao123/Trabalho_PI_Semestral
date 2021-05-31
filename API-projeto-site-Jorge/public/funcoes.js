@@ -41,18 +41,3 @@ function validar_sessao() {
 function finalizar_sessao() {
     fetch(`/usuarios/sair/${login_usuario}`, {cache:'no-store'}); 
 }
-
-
-
-// function aguardar() {
-//     btn_entrar.disabled = true;
-//     img_aguarde.style.visibility = 'visible';
-//     div_erro.style.visibility = 'hidden';
-// }
-
-// function finalizar_aguardar(resposta) {
-//     btn_entrar.disabled = false;
-//     img_aguarde.style.visibility = 'hidden';
-//     div_erro.style.visibility = 'visible';
-//     div_erro.innerHTML = resposta;
-// }

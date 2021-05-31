@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,15 +24,17 @@
         <div class="foto-dedicatorias">
             <img src="img/imagem_familia.jpeg" alt="" class="img-dedicatorias">
         </div>
-        <div class="foto-dedicatorias"></div>
+        <div class="foto-dedicatorias">
+            <img src="img/imagem_amigos.jpg" alt="" class="img-dedicatorias-amigos">
+        </div>
     </div>
 
-    <button onclick="voltar()">VOLTAR A PÁGINA</button>
+    <button onclick="voltar()" class="btn-dedicatoria">VOLTAR A PÁGINA</button>
     
 </body>
 <script>
     function voltar() {
-        window.open('index.html');
+        window.location.href = 'index.html';
     }
 </script>
 </html>
